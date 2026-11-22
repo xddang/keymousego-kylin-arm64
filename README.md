@@ -14,35 +14,41 @@
 
 ## 下载
 
-可执行文件 `KeymouseGo`（ELF, AArch64, ~237 MiB）因**超过 Gitee 单附件 100MB 限制**，提供两种下载方式：
+可执行文件 `KeymouseGo`（ELF, AArch64, ~237 MiB）。因**超过 Gitee 单附件 100MB 限制**，提供两种方式：
 
 ### 方式 1：GitHub 直接下载（单文件，最省事）
 <https://github.com/xddang/keymousego-kylin-arm64/releases/download/v1.0/KeymouseGo>
 
-### 方式 2：Gitee 分卷（国内快，需拼回）
-在 Gitee 发行版页下载 **全部 3 个分卷**：
+### 方式 2：Gitee 7-Zip 多卷压缩包（国内快）
+在 Gitee 发行版页下载 **全部 3 个卷**：
 <https://gitee.com/hy2431579034/keymousego-kylin-arm64/releases>
 
 ```
-KeymouseGo.part01   (90.0 MB)
-KeymouseGo.part02   (90.0 MB)
-KeymouseGo.part03   (56.9 MB)
+KeymouseGo.7z.001   (90.0 MB)
+KeymouseGo.7z.002   (90.0 MB)
+KeymouseGo.7z.003   (53.8 MB)
 ```
 
-拼回并校验（Linux / 麒麟）：
+解压方式（三卷放在同一目录，解第一个卷即可）：
+- **Windows**：用 7-Zip 或 WinRAR 打开 `KeymouseGo.7z.001` → 提取 → 得到 `KeymouseGo`
+- **Linux / 麒麟**：
+  ```bash
+  sudo apt install p7zip-full        # 若未安装
+  7z x KeymouseGo.7z.001             # 自动读取后续卷，得到 KeymouseGo
+  chmod +x KeymouseGo
+  ```
+
+校验（解压出的 `KeymouseGo`）：
 ```bash
-cat KeymouseGo.part01 KeymouseGo.part02 KeymouseGo.part03 > KeymouseGo
-chmod +x KeymouseGo
 sha256sum KeymouseGo
 # 应输出: 5289546448F389DA479A714E2B4B5704C0B8086B3384E6206F1D5C694B7D8B73
-
-./KeymouseGo
 ```
 
-> **Windows 用户**：把 3 个分卷和本仓库的 `merge.bat` 放同一目录，双击 `merge.bat` 即可合并
-> （底层是 `copy /b`）；也可用 WSL/Git Bash 执行上面的 `cat`。
-
----
+## 运行
+```bash
+chmod +x KeymouseGo
+./KeymouseGo
+```
 
 ## 配置与脚本
 - 配置项：中文界面，`f10` 录制 / `f6` 开始 / `f9` 停止。
@@ -50,11 +56,11 @@ sha256sum KeymouseGo
 - 运行时结构：`config.ini`（zh-cn）、`scripts/*.json5`、`plugins/`、`logs/`。
 
 ## 校验信息 (SHA-256)
-整包：
+解压出的整文件：
 ```
 5289546448F389DA479A714E2B4B5704C0B8086B3384E6206F1D5C694B7D8B73  KeymouseGo
 ```
-分卷：见 `PARTS-SHA256SUMS.txt`。
+各压缩卷：见 `ARCHIVE-SHA256SUMS.txt`。
 
 ## 免责声明
 - 本仓库为开源项目上游代码的二次编译产物，版权归上游项目所有。
