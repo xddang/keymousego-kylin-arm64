@@ -13,7 +13,7 @@
 ## 下载可执行文件
 可执行文件 `KeymouseGo`（ELF, AArch64, ~237 MiB）因超过 Git 单文件上限，**放在本仓库的 Releases 页**：
 - GitHub: <https://github.com/xddang/keymousego-kylin-arm64/releases>
-- Gitee: <https://gitee.com/2431579034@qq.com/keymousego-kylin-arm64/releases>
+- Gitee: <https://gitee.com/hy2431579034/keymousego-kylin-arm64/releases>
 
 下载后赋予可执行权限运行：
 ```bash
