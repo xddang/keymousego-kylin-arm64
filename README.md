@@ -10,22 +10,20 @@
 - **编译时间**：2026-06-30
 - **源码目录**：`/home/hy/桌面/KeymouseGo-master/KeymouseGo-master/`
 
-## 文件
-```
-KeymouseGo    # 可执行文件（ELF, AArch64），~237 MiB
-README.md     # 本说明
-SHA256SUMS.txt
-```
+## 下载可执行文件
+可执行文件 `KeymouseGo`（ELF, AArch64, ~237 MiB）因超过 Git 单文件上限，**放在本仓库的 Releases 页**：
+- GitHub: <https://github.com/xddang/keymousego-kylin-arm64/releases>
+- Gitee: <https://gitee.com/2431579034@qq.com/keymousego-kylin-arm64/releases>
 
-## 使用
+下载后赋予可执行权限运行：
 ```bash
 chmod +x KeymouseGo
 ./KeymouseGo
 ```
 
-### 配置与脚本
+## 配置与脚本
 - 配置项：中文界面，`f10` 录制 / `f6` 开始 / `f9` 停止。
-- 宏脚本为 JSON5 格式，示例脚本结构（事件：鼠标移动/按下/抬起，坐标百分比）见上游项目说明。
+- 宏脚本为 JSON5 格式（事件：鼠标移动/按下/抬起，坐标百分比）。
 - 运行时结构：`config.ini`（zh-cn）、`scripts/*.json5`、`plugins/`、`logs/`。
 
 ## 校验信息 (SHA-256)
